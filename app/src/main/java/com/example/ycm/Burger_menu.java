@@ -1,0 +1,259 @@
+package com.example.ycm;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
+
+public class Burger_menu extends AppCompatActivity {
+
+    TextView pizza_price_textview_1,pizza_price_textview_2,pizza_price_textview_3,pizza_price_textview_4,pizza_price_textview_5,pizza_price_textview_6;
+    String string_size_1,string_type_1,order_1, string_size_2,string_type_2,order_2,string_size_3,string_type_3,order_3, string_size_4,string_type_4,order_4,string_size_5,string_type_5,order_5,string_size_6,string_type_6,order_6;
+
+    Integer total, int_pizza_price_1=0,int_pizza_price_2=0,int_pizza_price_3=0,int_pizza_price_4=0,int_pizza_price_5=0,int_pizza_price_6=0;
+
+    ImageButton add_btn_1, small_btn_1, medium_btn_1, back_btn, cart_btn, add_btn_2, small_btn_2, medium_btn_2,add_btn_3, small_btn_3, medium_btn_3, add_btn_4, small_btn_4, medium_btn_4,add_btn_5, small_btn_5, medium_btn_5,large_btn_5,add_btn_6, small_btn_6, medium_btn_6,large_btn_6;
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_burger_menu);
+
+        GlobalVariable globalVariable =(GlobalVariable) this.getApplicationContext();
+
+        add_btn_1 = findViewById(R.id.add_btn_1);
+        small_btn_1 = findViewById(R.id.small_btn_1);
+        medium_btn_1 = findViewById(R.id.medium_btn_1);
+        back_btn = findViewById(R.id.back_btn);
+        cart_btn = findViewById(R.id.cart_btn);
+        pizza_price_textview_1 = findViewById(R.id.pizza_price_textview_1);
+
+        small_btn_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_size_1 = "1 burger";
+                int_pizza_price_1 = 100;
+                pizza_price_textview_1.setText(int_pizza_price_1+ " Rs");
+            }
+        });
+        medium_btn_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_size_1 = "+fries and coke";
+                int_pizza_price_1 = 190;
+                pizza_price_textview_1.setText(int_pizza_price_1+ " Rs");
+            }
+        });
+
+        add_btn_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_type_1 = ("Veg Burger");
+                order_1 = (string_type_1+" - "+string_size_1+" - "+int_pizza_price_1.toString());
+                globalVariable.getOrder_list().add(order_1);
+            }
+        });
+
+        add_btn_2 = findViewById(R.id.add_btn_2);
+        small_btn_2 = findViewById(R.id.small_btn_2);
+        medium_btn_2 = findViewById(R.id.medium_btn_2);
+
+        pizza_price_textview_2 = findViewById(R.id.pizza_price_textview_2);
+
+        small_btn_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_size_2 = "1 burger";
+                int_pizza_price_2 = 120;
+                pizza_price_textview_2.setText(int_pizza_price_2+ " Rs");
+            }
+        });
+        medium_btn_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_size_2 = "+fries and coke";
+                int_pizza_price_2 = 210;
+                pizza_price_textview_2.setText(int_pizza_price_2+ " Rs");
+            }
+        });
+
+        add_btn_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_type_2= ("Panner Burger");
+                order_2 = (string_type_2+" - "+string_size_2+" - "+int_pizza_price_2.toString());
+                globalVariable.getOrder_list().add(order_2);
+            }
+        });
+
+
+
+        add_btn_3 = findViewById(R.id.add_btn_3);
+        small_btn_3 = findViewById(R.id.small_btn_3);
+        medium_btn_3 = findViewById(R.id.medium_btn_3);
+
+        pizza_price_textview_3 = findViewById(R.id.pizza_price_textview_3);
+
+
+        small_btn_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_size_3 = "1 Burger";
+                int_pizza_price_3 = 150;
+                pizza_price_textview_3.setText(int_pizza_price_3+ " Rs");
+            }
+        });
+        medium_btn_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_size_3 = "+fries and coke";
+                int_pizza_price_3 = 240;
+                pizza_price_textview_3.setText(int_pizza_price_3+ " Rs");
+            }
+        });
+
+        add_btn_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_type_3= ("Chicken Burger");
+                order_3 = (string_type_3+" - "+string_size_3+" - "+int_pizza_price_3.toString());
+                globalVariable.getOrder_list().add(order_3);
+            }
+        });
+        add_btn_4 = findViewById(R.id.add_btn_4);
+        small_btn_4 = findViewById(R.id.small_btn_4);
+        medium_btn_4 = findViewById(R.id.medium_btn_4);
+
+        pizza_price_textview_4 = findViewById(R.id.pizza_price_textview_4);
+
+
+        small_btn_4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_size_4 = "1 Sub";
+                int_pizza_price_4 = 100;
+                pizza_price_textview_4.setText(int_pizza_price_4+ " Rs");
+            }
+        });
+        medium_btn_4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_size_4 = "+fries and coke";
+                int_pizza_price_4 = 190;
+                pizza_price_textview_4.setText(int_pizza_price_4+ " Rs");
+            }
+        });
+        add_btn_4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_type_4= ("Veg Sub Sandwich");
+                order_4 = (string_type_4+" - "+string_size_4+" - "+int_pizza_price_4.toString());
+                globalVariable.getOrder_list().add(order_4);
+            }
+        });
+
+        add_btn_5 = findViewById(R.id.add_btn_5);
+        small_btn_5 = findViewById(R.id.small_btn_5);
+        medium_btn_5 = findViewById(R.id.medium_btn_5);
+        large_btn_5 = findViewById(R.id.large_btn_5);
+        pizza_price_textview_5 = findViewById(R.id.pizza_price_textview_5);
+
+
+        small_btn_5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_size_5 = "White";
+                int_pizza_price_5 = 250;
+                pizza_price_textview_5.setText(int_pizza_price_5+ " Rs");
+            }
+        });
+        medium_btn_5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_size_5 = "Red";
+                int_pizza_price_5 = 250;
+                pizza_price_textview_5.setText(int_pizza_price_5+ " Rs");
+            }
+        });
+        large_btn_5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_size_5 = "Mixed";
+                int_pizza_price_5 = 250;
+                pizza_price_textview_5.setText(int_pizza_price_5+ " Rs");
+            }
+        });
+        add_btn_5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_type_5= ("Veg Pasta");
+                order_5 = (string_type_5+" - "+string_size_5+" - "+int_pizza_price_5.toString());
+                globalVariable.getOrder_list().add(order_5);
+            }
+        });
+
+        add_btn_6 = findViewById(R.id.add_btn_6);
+        small_btn_6 = findViewById(R.id.small_btn_6);
+        medium_btn_6 = findViewById(R.id.medium_btn_6);
+        large_btn_6 = findViewById(R.id.large_btn_6);
+        pizza_price_textview_6 = findViewById(R.id.pizza_price_textview_6);
+
+
+        small_btn_6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_size_6 = "White";
+                int_pizza_price_6 = 350;
+                pizza_price_textview_6.setText(int_pizza_price_6+ " Rs");
+            }
+        });
+        medium_btn_6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_size_6 = "Red";
+                int_pizza_price_6 = 350;
+                pizza_price_textview_6.setText(int_pizza_price_6+ " Rs");
+            }
+        });
+        large_btn_6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_size_6 = "Mixed";
+                int_pizza_price_6 = 350;
+                pizza_price_textview_6.setText(int_pizza_price_6+ " Rs");
+            }
+        });
+        add_btn_6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                string_type_6= ("Chicken Pasta");
+                order_6 = (string_type_6+" - "+string_size_6+" - "+int_pizza_price_6.toString());
+                globalVariable.getOrder_list().add(order_6);
+            }
+        });
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Burger_menu.this, menu.class);
+                startActivity(intent);
+            }
+        });
+
+        cart_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                total=int_pizza_price_1+int_pizza_price_2+int_pizza_price_3+int_pizza_price_4+int_pizza_price_5+int_pizza_price_6;
+                globalVariable.setBurger_total(total);
+                Intent intent = new Intent(Burger_menu.this, cart.class);
+                startActivity(intent);
+
+            }
+        });
+    }
+}

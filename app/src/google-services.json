@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "229083059225",
+    "project_id": "ycm-94c59",
+    "storage_bucket": "ycm-94c59.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229083059225:android:f5f77163c5114b2debc688",
+        "android_client_info": {
+          "package_name": "com.example.ycm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229083059225-fpu4itl9h0p0pm04an2dr699ho1kt8v2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvfLzi-Hf0vt4zBNBU2X5DROC6KV5Llos"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "229083059225-fpu4itl9h0p0pm04an2dr699ho1kt8v2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
